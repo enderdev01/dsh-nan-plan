@@ -1,0 +1,53 @@
+{
+  "name": "@local/nan-plan",
+  "version": "1.2.0",
+  "private": true,
+  "description": "DeepSeek Harness plugin that shows how much of your NaN inference plan is left.",
+  "license": "MIT",
+  "author": "anthoniriv",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enderdev01/dsh-nan-plan.git"
+  },
+  "homepage": "https://github.com/enderdev01/dsh-nan-plan#readme",
+  "bugs": {
+    "url": "https://github.com/enderdev01/dsh-nan-plan/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "nan",
+    "nan.builders",
+    "quota",
+    "tokens",
+    "usage"
+  ]
+}

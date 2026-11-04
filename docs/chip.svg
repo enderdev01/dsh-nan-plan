@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" role="img" aria-label="The dsh-nan-plan chip under the chat composer, and its detail panel open above it">
+  <defs>
+    <filter id="panel-shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e141b" />
+      <stop offset="1" stop-color="#0a0e13" />
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4ade80" />
+      <stop offset="1" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1120" height="600" rx="18" fill="#0b0f14" />
+  <rect x="40" y="36" width="1040" height="528" rx="14" fill="url(#frame)" stroke="#1b232c" />
+
+  <!-- faded conversation -->
+  <rect x="84" y="86" width="330" height="30" rx="10" fill="#131a23" />
+  <rect x="102" y="97" width="150" height="8" rx="4" fill="#222c38" />
+  <rect x="84" y="130" width="470" height="30" rx="10" fill="#131a23" />
+  <rect x="102" y="141" width="230" height="8" rx="4" fill="#222c38" />
+  <rect x="84" y="174" width="240" height="30" rx="10" fill="#131a23" />
+  <rect x="102" y="185" width="120" height="8" rx="4" fill="#222c38" />
+
+  <!-- detail panel -->
+  <g filter="url(#panel-shadow)">
+    <rect x="706" y="166" width="304" height="246" rx="14" fill="#121a24" stroke="#27313d" />
+  </g>
+  <text x="728" y="200" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e8eef4">Plan NaN 20 €</text>
+  <text x="988" y="200" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9aa6b2">78 % libre</text>
+
+  <rect x="728" y="216" width="260" height="7" rx="3.5" fill="#232d3a" />
+  <rect x="728" y="216" width="203" height="7" rx="3.5" fill="url(#fill)" />
+
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12">
+    <text x="728" y="250" fill="#7d8996">Quedan</text>
+    <text x="988" y="250" text-anchor="end" fill="#d3dbe4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">776 M tok</text>
+    <text x="728" y="274" fill="#7d8996">Usado</text>
+    <text x="988" y="274" text-anchor="end" fill="#d3dbe4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">224 M tok</text>
+    <text x="728" y="298" fill="#7d8996">Cuota</text>
+    <text x="988" y="298" text-anchor="end" fill="#d3dbe4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">1 B tok</text>
+    <text x="728" y="322" fill="#7d8996">Peticiones</text>
+    <text x="988" y="322" text-anchor="end" fill="#d3dbe4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">1.328</text>
+    <text x="728" y="346" fill="#7d8996">Desde</text>
+    <text x="988" y="346" text-anchor="end" fill="#d3dbe4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2026-11-01</text>
+  </g>
+
+  <line x1="728" y1="368" x2="988" y2="368" stroke="#232d3a" />
+  <text x="728" y="394" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#6aa8ff">Abrir NaN ↗</text>
+
+  <!-- composer -->
+  <rect x="80" y="440" width="960" height="76" rx="16" fill="#141a22" stroke="#232c37" />
+  <text x="112" y="486" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#5f6b7a">Escribe un mensaje…</text>
+  <circle cx="1004" cy="478" r="17" fill="#1f6feb" />
+  <path d="M997 478 L1012 478 M1006 471 L1013 478 L1006 485" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- chip -->
+  <rect x="748" y="528" width="272" height="26" rx="9" fill="#16202b" stroke="#2b3644" />
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13">
+    <text x="762" y="549" font-weight="600" fill="#cfd8e3">NaN</text>
+    <rect x="800" y="542" width="64" height="6" rx="3" fill="#2a3542" />
+    <rect x="800" y="542" width="50" height="6" rx="3" fill="url(#fill)" />
+    <text x="876" y="549" fill="#93a0ae">78 % libre</text>
+    <text x="962" y="549" fill="#7b8794">776 M</text>
+  </g>
+
+  <text x="80" y="580" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#5b6675">The chip under the composer, and the panel it opens. The real component inherits the host theme tokens.</text>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "NaN plan",
+    "description": "Shows how many tokens of your NaN inference plan are left this period."
+  }
+}

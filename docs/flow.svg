@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="400" viewBox="0 0 1120 400" role="img" aria-label="Data flow: the browser asks the DSH host, the host reads the credential store and calls api.nan.builders, and returns computed numbers">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4a5665" />
+    </marker>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4ade80" />
+      <stop offset="1" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1120" height="400" rx="18" fill="#0b0f14" />
+
+  <!-- Web UI -->
+  <rect x="390" y="48" width="340" height="116" rx="12" fill="#121a24" stroke="#27313d" />
+  <text x="412" y="80" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e8eef4">Web UI</text>
+  <text x="412" y="106" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b98a6">chip under the composer</text>
+  <text x="412" y="126" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b98a6">panel: remaining, used, quota</text>
+  <text x="412" y="146" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#5f6b7a">inherits theme tokens, no secrets</text>
+
+  <!-- DSH Host -->
+  <rect x="390" y="206" width="340" height="136" rx="12" fill="#121a24" stroke="#27313d" />
+  <rect x="390" y="206" width="4" height="136" rx="2" fill="url(#accent)" />
+  <text x="412" y="238" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e8eef4">DSH Host</text>
+  <text x="412" y="264" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">credentials.resolve('NAN_API_KEY')</text>
+  <text x="412" y="284" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">GET /v1/usage · remaining = quota − used</text>
+  <text x="412" y="304" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">serves /nan-plan/usage</text>
+  <text x="412" y="326" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5f6b7a">60 s cache · key never leaves this process</text>
+
+  <!-- NaN API -->
+  <rect x="800" y="206" width="270" height="136" rx="12" fill="#121a24" stroke="#27313d" />
+  <text x="822" y="238" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="600" fill="#e8eef4">api.nan.builders</text>
+  <text x="822" y="264" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">/v1/usage</text>
+  <text x="822" y="284" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">Authorization: Bearer sk-…</text>
+  <text x="822" y="304" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">totals.total_tokens</text>
+  <text x="822" y="326" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5f6b7a">month to date, per day and model</text>
+
+  <!-- Credential store -->
+  <rect x="60" y="206" width="270" height="136" rx="12" fill="#121a24" stroke="#27313d" stroke-dasharray="5 5" />
+  <text x="82" y="238" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#e8eef4">Credential store</text>
+  <text x="82" y="264" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" fill="#8b98a6">~/.dsh/.credentials.yaml</text>
+  <text x="82" y="284" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b98a6">rotating the key applies to the</text>
+  <text x="82" y="304" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b98a6">next request, no restart</text>
+
+  <!-- arrows: UI <-> Host -->
+  <line x1="608" y1="168" x2="608" y2="198" stroke="#4a5665" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="622" y="190" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#7d8996">GET /nan-plan/usage</text>
+  <line x1="512" y1="202" x2="512" y2="170" stroke="#4a5665" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="498" y="190" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#7d8996">JSON · no-store</text>
+
+  <!-- arrows: Host <-> API -->
+  <line x1="736" y1="252" x2="794" y2="252" stroke="#4a5665" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="765" y="242" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#7d8996">HTTPS</text>
+  <line x1="794" y1="292" x2="740" y2="292" stroke="#4a5665" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="768" y="312" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#7d8996">totals</text>
+
+  <!-- arrow: store -> Host -->
+  <line x1="336" y1="274" x2="384" y2="274" stroke="#4a5665" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="360" y="264" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#7d8996">key</text>
+
+  <text x="60" y="378" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#5b6675">The key stays in the host process. The browser only receives computed numbers.</text>
+</svg>

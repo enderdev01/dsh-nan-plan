@@ -1,0 +1,6 @@
+- insert:
+    - id: nan-plan
+      name: '@local/nan-plan'
+      config:
+        apiKeyRef: NAN_API_KEY
+        plan: '20'
